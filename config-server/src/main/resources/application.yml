@@ -1,0 +1,19 @@
+server:
+  port: 8887
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server: 
+        git:
+          uri: https://github.com/juzhenxing/springcloud/
+          searchPaths: respo
+          username: juzhenxing
+          password: jzx960125
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8889/eureka/
